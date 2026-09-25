@@ -5,13 +5,13 @@ Status: draft
 ## Summary
 
 Each created monster is a procedurally generated individual, assembled from
-the base/characteristics/modifiers layers described in
+the foundation/characteristics/modifiers layers described in
 `monster-creation.md` rather than being a fixed, hand-authored creature per
 recipe. This doc covers how that assembly translates into concrete traits,
 appearance, and behavior — i.e., what actually comes out the other end of
-the base + characteristics + modifiers pipeline. Two monsters built from
-the same base, or the same characteristic materials, can still end up
-looking and acting differently.
+the foundation + characteristics + modifiers pipeline. Two monsters built
+from the same foundation, or the same characteristic resources, can still
+end up looking and acting differently.
 
 Traits draw stylistic influence from current creepypasta/internet-horror
 aesthetics — the kind of imagery and behavioral tropes associated with
@@ -29,7 +29,8 @@ it does it to you).
 ## Design notes
 
 - Traits are driven by which base, characteristics, and modifiers went into
-  a monster (see `monster-creation.md`), not fully random rolls — the base
+  a monster (see `monster-creation.md`), not fully random rolls — the
+  foundation
   likely governs core temperament/nature, worldly characteristics govern
   physical traits/capabilities, and sacrificial modifiers govern the
   riskier/rarer twists. The player influences the outcome by choosing

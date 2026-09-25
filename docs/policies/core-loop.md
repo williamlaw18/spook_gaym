@@ -12,8 +12,8 @@ around:
    down there, being ones the player previously created.
 3. **Return** — bring resources back up to the surface factory before
    running out of time, health, or nerve.
-4. **Craft** — assemble new monsters in layers: a base from soul-like
-   resources, characteristics layered on from worldly materials, and
+4. **Craft** — assemble new monsters in layers: a foundation from soul-like
+   resources, characteristics layered on from worldly resources, and
    optional modifiers from the sacrifice sub-chain. See
    `monster-creation.md` for the full pipeline.
 5. **Release** — created monsters don't stay put; they enter the caverns

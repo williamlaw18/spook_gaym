@@ -12,7 +12,7 @@ gathering:
    possibly one of their own released monsters) rather than harvesting a
    material.
 2. **Sacrifice** — the captured creature is fed into a dedicated
-   device/ritual in the factory/homebase, distinct from the base and
+   device/ritual in the factory/homebase, distinct from the foundation and
    characteristics crafting stations.
 3. **Convert** — the ritual converts the sacrificed creature into a
    modifier resource, which can then be layered onto a monster's base +
@@ -34,7 +34,8 @@ imagery, and should feel weightier than gathering ore/soul material.
   the difficulty curve) in an even more direct, costly way.
 - Modifier potency/darkness should likely scale with what's sacrificed (a
   minor cavern critter vs. a powerful player-made monster), giving the
-  player a risk/reward lever independent of the base/characteristics layers.
+  player a risk/reward lever independent of the foundation/characteristics
+  layers.
 - This system is a strong candidate for pushing corruption forward — see
   `demon-and-corruption.md` — since it's the most overtly demonic/ritual
   act in the game's crafting loop.

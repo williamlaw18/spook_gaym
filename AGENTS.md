@@ -108,7 +108,7 @@ This index should be kept up to date as docs are added or renamed.
 | [`core-loop.md`](docs/policies/core-loop.md) | Detailed breakdown of the gather → craft → create → descend loop |
 | [`monster-creation.md`](docs/policies/monster-creation.md) | Base/characteristics/modifiers creation pipeline, how created monsters enter the world |
 | [`sacrifice-system.md`](docs/policies/sacrifice-system.md) | Capture -> sacrifice -> modifier resource sub-chain |
-| [`dungeon-exploration.md`](docs/policies/dungeon-exploration.md) | Procedural cavern generation, player tools, stealth/evasion vs. hunting monsters |
+| [`dungeon-exploration.md`](docs/policies/dungeon-exploration.md) | Procedural cavern exploration, evasion-focused threat stance, extraction pressure |
 | [`demon-and-corruption.md`](docs/policies/demon-and-corruption.md) | The demon, chaos/corruption escalation, and the endgame choice |
 | [`monster-design.md`](docs/policies/monster-design.md) | Procedural trait/appearance generation, creepypasta influences, trait discovery through play |
 | [`visual-style.md`](docs/policies/visual-style.md) | Art direction: PS1/PS2-era look, dark/crispy rendering treatment |
@@ -124,3 +124,9 @@ This index should be kept up to date as docs are added or renamed.
 - **AI agents do not manage git.** No committing, staging, pushing,
   branching, or other git operations on behalf of the developer. Git stays
   entirely in the developer's hands; agents only edit files.
+- **AI agents do not invent mechanics, systems, or design ideas
+  unprompted.** Only document what the developer has actually described.
+  When a doc has a gap, leave it as an open question or ask the developer —
+  never fill it in with an invented mechanic to make the doc feel complete.
+  Elaboration/wording is fine; new ideas, systems, or design decisions are
+  not, unless the developer stated them.
