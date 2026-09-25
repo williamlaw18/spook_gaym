@@ -112,6 +112,9 @@ This index should be kept up to date as docs are added or renamed.
 | [`demon-and-corruption.md`](docs/policies/demon-and-corruption.md) | The demon, chaos/corruption escalation, and the endgame choice |
 | [`monster-design.md`](docs/policies/monster-design.md) | Procedural trait/appearance generation, creepypasta influences, trait discovery through play |
 | [`visual-style.md`](docs/policies/visual-style.md) | Art direction: PS1/PS2-era look, dark/crispy rendering treatment |
+| [`project-structure.md`](docs/policies/project-structure.md) | Godot project layout: folders, scenes, mode switching |
+| [`player-controller.md`](docs/policies/player-controller.md) | First-person controller: movement feel, look, tuning |
+| [`interaction.md`](docs/policies/interaction.md) | Look-and-press interaction: interactables, prompts, cavern entrance |
 
 ## Working Agreement
 

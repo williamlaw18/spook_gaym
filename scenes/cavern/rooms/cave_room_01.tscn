@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/cavern/rooms/cavern_room.gd" id="1_room"]
+[ext_resource type="Script" path="res://scenes/cavern/rooms/room_connector.gd" id="2_connector"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rock"]
+albedo_color = Color(0.35, 0.31, 0.28, 1)
+roughness = 1.0
+
+[node name="CaveRoom01" type="Node3D"]
+script = ExtResource("1_room")
+shell_path = NodePath("Rock/Shell")
+
+[node name="Rock" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="Shell" type="CSGBox3D" parent="Rock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+size = Vector3(22, 10, 22)
+material = SubResource("StandardMaterial3D_rock")
+
+[node name="ChamberA" type="CSGSphere3D" parent="Rock"]
+transform = Transform3D(7, 0, 0, 0, 5, 0, 0, 0, 6, -2, 1, 1.5)
+operation = 2
+radius = 1.0
+radial_segments = 10
+rings = 6
+smooth_faces = false
+material = SubResource("StandardMaterial3D_rock")
+
+[node name="ChamberB" type="CSGSphere3D" parent="Rock"]
+transform = Transform3D(5.196, 0, 3.25, 0, 4.5, 0, -3, 0, 5.629, 3, 1, -2)
+operation = 2
+radius = 1.0
+radial_segments = 10
+rings = 6
+smooth_faces = false
+material = SubResource("StandardMaterial3D_rock")
+
+[node name="ChamberC" type="CSGSphere3D" parent="Rock"]
+transform = Transform3D(5, 0, 0, 0, 4, 0, 0, 0, 4, -3, 1, -5)
+operation = 2
+radius = 1.0
+radial_segments = 10
+rings = 6
+smooth_faces = false
+material = SubResource("StandardMaterial3D_rock")
+
+[node name="FloorFill" type="CSGBox3D" parent="Rock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+size = Vector3(22, 2, 22)
+material = SubResource("StandardMaterial3D_rock")
+
+[node name="DoorNorth" type="CSGBox3D" parent="Rock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.5, -8)
+operation = 2
+size = Vector3(3, 3, 8)
+material = SubResource("StandardMaterial3D_rock")
+
+[node name="DoorEast" type="CSGBox3D" parent="Rock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.5, 2)
+operation = 2
+size = Vector3(8, 3, 3)
+material = SubResource("StandardMaterial3D_rock")
+
+[node name="North" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -11)
+script = ExtResource("2_connector")
+
+[node name="East" type="Marker3D" parent="."]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 11, 0, 2)
+script = ExtResource("2_connector")

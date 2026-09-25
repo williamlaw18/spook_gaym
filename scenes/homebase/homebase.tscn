@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/homebase/homebase.gd" id="1_homebase"]
+[ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2_player"]
+[ext_resource type="PackedScene" path="res://scenes/homebase/cavern_entrance.tscn" id="3_entrance"]
+
+[node name="Homebase" type="Node3D"]
+script = ExtResource("1_homebase")
+
+[node name="PlaceholderFloor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+size = Vector3(40, 1, 40)
+
+[node name="PlaceholderLight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 10, 0)
+
+[node name="CavernEntrance" parent="." instance=ExtResource("3_entrance")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+
+[connection signal="entered" from="CavernEntrance" to="." method="_on_cavern_entrance_entered"]

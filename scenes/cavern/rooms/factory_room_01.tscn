@@ -1,0 +1,156 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/cavern/rooms/cavern_room.gd" id="1_room"]
+[ext_resource type="Script" path="res://scenes/cavern/rooms/room_connector.gd" id="2_connector"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_concrete"]
+albedo_color = Color(0.4, 0.4, 0.38, 1)
+roughness = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_metal"]
+albedo_color = Color(0.28, 0.3, 0.32, 1)
+roughness = 0.8
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ramp"]
+size = Vector3(1.5, 0.2, 7.826)
+
+[node name="FactoryRoom01" type="Node3D"]
+script = ExtResource("1_room")
+shell_path = NodePath("Structure/Shell")
+
+[node name="Structure" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="Shell" type="CSGBox3D" parent="Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+size = Vector3(20, 11, 20)
+material = SubResource("StandardMaterial3D_concrete")
+
+[node name="Interior" type="CSGBox3D" parent="Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+operation = 2
+size = Vector3(16, 8, 16)
+material = SubResource("StandardMaterial3D_concrete")
+
+[node name="Mezzanine" type="CSGBox3D" parent="Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35, -5.5)
+size = Vector3(16, 0.3, 5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="PostWest" type="CSGBox3D" parent="Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1.6, -3.2)
+size = Vector3(0.4, 3.2, 0.4)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="PostEast" type="CSGBox3D" parent="Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.6, -3.2)
+size = Vector3(0.4, 3.2, 0.4)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="DoorSouth" type="CSGBox3D" parent="Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 9)
+operation = 2
+size = Vector3(3, 3, 4)
+material = SubResource("StandardMaterial3D_concrete")
+
+[node name="DoorEast" type="CSGBox3D" parent="Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1.5, 2)
+operation = 2
+size = Vector3(4, 3, 3)
+material = SubResource("StandardMaterial3D_concrete")
+
+[node name="DoorMezzanine" type="CSGBox3D" parent="Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -9)
+operation = 2
+size = Vector3(3, 3, 4)
+material = SubResource("StandardMaterial3D_concrete")
+
+[node name="Stairs" type="CSGCombiner3D" parent="."]
+
+[node name="Step01" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 0.125, 3.75)
+size = Vector3(1.5, 0.25, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step02" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 0.25, 3.25)
+size = Vector3(1.5, 0.5, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step03" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 0.375, 2.75)
+size = Vector3(1.5, 0.75, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step04" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 0.5, 2.25)
+size = Vector3(1.5, 1, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step05" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 0.625, 1.75)
+size = Vector3(1.5, 1.25, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step06" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 0.75, 1.25)
+size = Vector3(1.5, 1.5, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step07" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 0.875, 0.75)
+size = Vector3(1.5, 1.75, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step08" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 1, 0.25)
+size = Vector3(1.5, 2, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step09" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 1.125, -0.25)
+size = Vector3(1.5, 2.25, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step10" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 1.25, -0.75)
+size = Vector3(1.5, 2.5, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step11" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 1.375, -1.25)
+size = Vector3(1.5, 2.75, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step12" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 1.5, -1.75)
+size = Vector3(1.5, 3, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step13" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 1.625, -2.25)
+size = Vector3(1.5, 3.25, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="Step14" type="CSGBox3D" parent="Stairs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 1.75, -2.75)
+size = Vector3(1.5, 3.5, 0.5)
+material = SubResource("StandardMaterial3D_metal")
+
+[node name="StairsRamp" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.894427, -0.447214, 0, 0.447214, 0.894427, -7.25, 1.6606, 0.4553)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StairsRamp"]
+shape = SubResource("BoxShape3D_ramp")
+
+[node name="South" type="Marker3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 10)
+script = ExtResource("2_connector")
+
+[node name="East" type="Marker3D" parent="."]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 10, 0, 2)
+script = ExtResource("2_connector")
+
+[node name="Mezzanine" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -10)
+script = ExtResource("2_connector")
