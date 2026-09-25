@@ -19,9 +19,9 @@ artifacting), leaning into that era's inherent unease. See
 
 The player runs a homebase (factory/house) on the surface. Below it lie
 procedural caverns and dungeons full of resources. Resources are hauled back
-to the surface and layered together to create monsters: a **base** (from
-soul-like resources), **characteristics** (from worldly materials), and
-optional **modifiers** (from a sacrificial sub-chain — capturing a creature
+to the surface and layered together to create procedural monsters: a **foundation** (from
+soul-like resources), **characteristics** (from worldly resources), and
+optional **modifiers** (from a blood scrifice sub-chain — capturing a creature
 and feeding it into a ritual device). See `docs/policies/monster-creation.md`
 and `docs/policies/sacrifice-system.md`. More monsters and more resources
 unlock deeper exploration and further progression.
@@ -121,3 +121,6 @@ This index should be kept up to date as docs are added or renamed.
 - If a policy doc contradicts this file, this file wins for tenets; the
   policy doc wins for system-specific detail. Resolve conflicts by editing,
   not by ignoring one side.
+- **AI agents do not manage git.** No committing, staging, pushing,
+  branching, or other git operations on behalf of the developer. Git stays
+  entirely in the developer's hands; agents only edit files.
